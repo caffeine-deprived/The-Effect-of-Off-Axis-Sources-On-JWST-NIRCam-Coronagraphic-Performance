@@ -68,7 +68,7 @@ def find_average_loss_total(data_array):
 
 def find_local_loss(data_array, x_location, y_location, filename, arcsec_per_pixel=0.063):
     """
-    Find the median pixel value within 1" of the specified location.
+    Find the average pixel value within 1" of the specified location.
 
     Args:
         data_array (numpy array): The data array from the .fits file.
