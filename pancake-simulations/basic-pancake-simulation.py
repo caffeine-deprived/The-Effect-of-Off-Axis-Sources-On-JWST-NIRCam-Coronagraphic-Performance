@@ -22,7 +22,7 @@ if __name__ == '__main__':
     seq.add_observation(target, exposures=[('F444W', 'DEEP8', 18, 5 )], nircam_mask='MASK335R', rolls=[0]) #target observation, with these specific parameters
     seq.add_observation(reference, exposures=[('F444W', 'DEEP8', 18, 5)], nircam_mask='MASK335R', scale_exposures=target)
     
-    results = seq.run(save_file='./example-name.fits', ta_error='saved') #ta_error is saved since we are simy
+    results = seq.run(save_file='./example-name.fits', ta_error='saved')
     pancake.analysis.contrast_curve(results, target='Target',references='Reference',  subtraction='RDI', save_prefix=('example-prefix-name'), klip_subsections=10, klip_annuli=10, sub_only=False, regis_err='saved')
     #'sub-only' paramenter causes contrast curve function to skip the contrast calculation and only do the subtraction, saving runtime
 
